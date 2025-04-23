@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Robert Sago - Information Science Portfolio</title>
+    <meta name="description" content="E-Commerce and Information Technology Lectures">
+    <meta name="keywords" content=" HTML, CSS, PHP ,JavaScript, Java, SQL">
+    <meta name="author" content="Robert Sago">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- See https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
+<style>
+body {margin:0;font-family:Arial}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	/*background-color: #666;*/
+	}
+
+#container {
+	margin-right: 50px;
+	margin-left: 50px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+p.shift {
+    margin-left: 30px;
+}
+
+.listmargin  {
+	margin-bottom: 20px;
+}	
+
+.img-style-1 {
+	float: left;
+	margin-right: 10px;
+    margin-bottom: 10px;
+	padding: 5px;
+	border: 1px solid #CCC;
+}	
+
+
+
+</style>
+</head>
+<body>
+<div id="container">
+    <h1>Portfolio of Robert Sago</h1>
+    <div class="topnav" id="myTopnav">
+        <a class="tablinks" onclick="openTab(event, 'Home')" class="active" id="defaultOpen">Profile</a>
+        <a class="tablinks" onclick="openTab(event, 'Resume')">Resume</a>
+        <a class="tablinks" onclick="openTab(event, 'Skills')">Skills</a>
+        <a class="tablinks" onclick="openTab(event, 'Education')">Education</a>
+        <a class="tablinks" onclick="openTab(event, 'Accomplishments')">Accomplishments</a>
+        <a class="tablinks" onclick="openTab(event, 'CoverLetter')">Cover Letter</a>
+        <a class="tablinks" onclick="openTab(event, 'Contact')">Contact</a>
+        <div class="dropdown">
+            <button class="dropbtn">Work Examples 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a class="tablinks" onclick="openTab(event, 'Writing')">Writing Examples</a>
+                <a class="tablinks" onclick="openTab(event, 'WebProject')">Web Project</a>
+                <a class="tablinks" onclick="openTab(event, 'Database')">Database</a>
+                <a class="tablinks" onclick="openTab(event, 'Programming')">Programming</a>
+                <a class="tablinks" onclick="openTab(event, 'SoftSkills')">Soft Skills</a>
+                <a class="tablinks" onclick="openTab(event, 'Capstone')">Capstone</a>
+            </div>
+        </div> 
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+
+    <!-- Begin Home Section -->
+    <div id="Home" class="tabcontent">
+        <h2>Profile</h2>
+        <p><img class="img-style-1" src="" alt="Photo of Robert Sago">
+           </p>
+        <p></p>
+    </div>
+
+    <!-- Begin Skills Section -->
+    <div id="Skills" class="tabcontent">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Java</li>
+          <li>SQL</li>
+        </ul>
+    </div>
+
+    <!-- Begin Education Section -->
+    <div id="Education" class="tabcontent">
+        <h2>Education</h2>
+        <h3>Bachelors Degree in Information Science (In progress)</h3>
+        <p>University of Arkansas Little Rock<br>2801 S. University Ave.
+          Little Rock, AR 72204</p>
+        <h3>Associate of Applied Science in ITT Technical Institute</h3>
+        <p><br>
+          Little Rock, AR 72110</p>
+        
+
+        <h2>Course Descriptions - Information Science Degree</h2>
+
+        <strong>BINS 4331 - Management of Information Resources</strong>
+        <p class="shift"> A study of a manager’s role and decisions
+              regarding information systems strategy, the management of information, technology operations, and
+              information systems projects within the organizational context of IT Audit and security. Dual listed in
+              the Graduate Catalog as BINS 5331</p>
+
+        
+
+        <strong>IFSC 1202 - Introduction to Object-oriented Technology (Python) </strong>
+        <p class="shift">An introduction to application development using an integrated development 
+              environment with an emphasis on understanding object- oriented programming. 
+              Topics covered include programming fundamentals (sequence, decision, and repetition), 
+              working with forms and controls, and manipulating user input and elementary files. This is a 
+              laboratory computer-based course with hands-on exercises.</p>
+
+        <strong>IFSC 1310 - Web Technologies (HTML/CSS/Javascript)</strong>
+        <p class="shift">This course is an introduction to client-side
+              technologies and standards-based web development. The course will cover the critical components of
+              any website. Core components include Structure, Content, Presentation, and Behavior with particular
+              attention paid to the design of a website.</p>
+
+        <strong>IFSC 2200 - Ethics in the Profession</strong>
+        <p class="shift">This course is a survey of ethics and its applications to Engineering,
+              Computing and Information Technology Professions. It has the twin objectives of (i) Studying
+              professional code of ethics and the responsibilities that they place on technology professionals (ii)
+              Investigating the background and implications of ethical concerns in the real-world professional
+              environment.</p>
+
+        <strong>IFSC 2300 - Object-oriented Technology (Java)</strong>
+        <p class="shift">Computer programming in Java. Language used to
+              implement applications that employ objects and demonstrate software development by refinement and
+              inheritance. Topics include data types, control structures, repetitive structures; data structures including
+              arrays, lists, queues, stacks, and trees; recursion and File I/O.</p>
+
+        <strong>IFSC 2305 - Computer Systems</strong>
+        <p class="shift">In-depth introduction to the components of a personal computer; topics
+              include number systems, identification and organization of CPU, memory, and peripherals; cache
+              technology; bus technology; upgrading, troubleshooting, and maintaining a personal computer.
+              Incorporates hands-on laboratory experiences.</p>
+
+
+        <strong>IFSC 3300 - Web Client Applications (Javascript)</strong>
+        <p class="shift">A hands-on course focusing on the technologies and
+              concepts for creating dynamic and interactive web sites with a special emphasis on client-side
+              technologies. Topics will cover techniques such as how to build efficient and dynamic interactive user
+              interfaces, how to interface with data using standardized, portable formats, how to store/validate data
+              and how to make data more accessible to other applications.</p>
+
+        
+
+        <strong>IFSC 3320 - Database Concepts (Oracle)</strong>
+        <p class="shift">Offers an introduction to the fundamentals and use of
+              relational databases and focuses on four major topics: ER-diagram, relational algebra, SQL language and
+              Oracle.</p>
+
+        <strong>IFSC 3330 - Current Trends in Database Technology (Oracle)</strong>
+        <p class="shift">Current trends in database design and
+              management emphasizing typical applications in business, medicine, and science. Survey of modern
+              database technologies including object-related database technology, query processing and optimization,
+              transaction processing concepts, concurrency control techniques, database security and authorization,
+              data mining, data warehousing, and web search engine technology. Discussion of database management
+              and distributed database management issues.</p>
+
+        <strong>IFSC 3360 - System Analysis and Design</strong>
+        <p class="shift">Fundamental concepts of object-oriented software analysis and
+              design including requirements specification, analysis, and design of software; issues in software reuse,
+              software packaging, and software management.</p>
+
+        <strong>IFSC 4396/4398 - Capstone Project I/II</strong>
+        <p class="shift">Capstone course in which students do an analysis and design
+              proposal for an information system/technology project. At the end of the second semester, students
+              complete the design, implementation, documentation, and presentation of their project.</p>                    
+
+        
+
+     
+        
+        <strong>RHET 3316 - Writing For Work</strong>
+        <p class="shift">Intensive instruction in the theory and practice of technical communication. 
+              Emphasis on understanding audience, establishing a clear purpose, using technology, 
+              acquiring a sense of the profession, and developing strategies for successfully producing 
+              individual and collaborative documents. Practice writing genres such as reports, 
+              instructions, descriptions, specifications, and proposals.</p>
+
+        
+        
+
+        
+    </div>
+
+    <!-- Begin Accomplishments Section -->
+    <div id="Accomplishments" class="tabcontent">
+        <h2>Accomplishments</h2>
+    </div>        
+  
+    <!-- Begin Skills Section -->
+    <div id="Resume" class="tabcontent">
+        <h2>Resume</h2>
+        <p>Feel free to download my resume in  <a href="resources/Robert_Sago_Resume_Formatted.docx" target="_blank">Microsoft Word</a> or <a href="" target="_blank">PDF</a></p>
+       
+        <header>
+          <h1>Robert Sago</h1>
+          <p>Little Rock, AR<br>
+          501-920-0840<br>
+          <a href="mailto:rsago975@gmail.com">rsago975@gmail.com</a></p>
+        </header>
+        
+        <section>
+          <h2>Professional Goals</h2>
+          <p>With an existing Associate’s degree in Network Systems Administration and ongoing studies in Information Science at the University of Arkansas at Little Rock, I am looking to transition away from the retail industry and into a career in information technology.</p>
+        </section>
+        
+        <section>
+          <h2>Education</h2>
+          <ul>
+            <li><strong>The University of Arkansas Little Rock</strong><br>
+              Bachelor’s degree in Information Science (Expected Graduation Fall 2025).</li>
+            
+          </ul>
+        </section> 
+       
+        <section>
+          <h2>Skills</h2>
+          <ul>
+            <li>SQL, ERD, and Oracle</li>
+            <li>HTML, CSS, and some Javascript</li>
+            <li>Java</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Work History</h2>
+          <p>Kroger 2024-Present, 2020-2022 (Salesfloor associate; produce)<br>
+	     Slim Chickens 2023 (Front End Cashier)<br>
+	     Damgoode Pies 2022-2023 (Delivery Driver)<br>
+          </p>
+          <ul>
+            <li>Working in retail has helped me to develop interpersonal skills like being able to communicate as well as listen and resolve any conflicts that can arise in a stressful situation.</li>
+            <li></li>
+            <li>.</li>
+          </ul>
+        </section>
+    </div>
+    <!-- Begin Coverletter-->
+    <div id="CoverLetter" class="tabcontent">
+        <h2>Letter of Introduction</h2>
+        <p>Dear Hiring Manager,</p>
+        <p></a></li>
+      </ul>
+    </div>
+
+    <!--Begin Contact-->
+    <div id="Contact" class="tabcontent">
+      <h2>Contact Me</h2>
+      <ul>
+        <li>Phone: <a href="tel:+15019200840">(501) 920-0840</a></li>
+        <li>Email: <a href="mailto:rsago975@gmail.com">rsago975@gmail.com</a></li>
+        <li>Address: 3200 Coleman Place. CC-222, Little Rock, AR 72204</li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/robert-sago-28b81490/" target="_blank">www.linkedin.com/in/robert-sago</a></li>
+    </ul>
+    </div>
+
+    <!-- Begin Writing Examples-->
+    <div id="Writing" class="tabcontent">
+        <h2>Writing Example 1</h2>
+        <p>Below is an example of .</p>
+        <a 
+    </div>
+
+    <!-- Begin Web Examples -->
+    <div id="WebProject" class="tabcontent">
+        <h2>Web Project 1</h2>
+        <p>Here is a web project completed for my Capstone 1 course.</p>
+        <a href="">Web Project</a>
+
+        <h2>Web Project 2</h2>
+        <p>Here is a Web Project from my Web Technologies course.</p>
+        <a href="">Pending</a>
+    </div>
+
+    <!-- Begin Database Examples -->
+    <div id="Database" class="tabcontent">
+        <h2>Database Project 1</h2>
+        <p>Below is an example of how to normalize tables in a database. Normalization is done to reduce redundancy, protect the integrity of the database, and to make maintenace of the database easier.</p>
+        <a href="">Pending</a>
+        
+        
+        <h2>Database Project 2</h2>
+        <p></p>
+        <a href="resources/Project Table Creation.pdf">Table creation code</a>
+    </div>
+
+    <!-- Begin Programming Examples -->
+    <div id="Programming" class="tabcontent">
+        <h2>Programming Project 1</h2>        
+        <a href="">Javascript Calculator</a>
+        <h2>Programming Project 2</h2>
+        <a href="">Pending</a>
+    </div>
+
+    <!-- Begin Soft Skills -->
+    <div id="SoftSkills" class="tabcontent">
+        <h2>Soft Skills Project 1</h2>
+        <h2>Soft Skills Project 2</h2>
+    </div>
+
+    <!-- Begin Capstone Project -->
+    <div id="Capstone" class="tabcontent">
+        <h2>Capstone Project</h2>
+    </div>
+</div>
+
+<script>
+/* Click the default tab so that the profile is displayed */
+document.getElementById("defaultOpen").click();
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function openTab(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>
