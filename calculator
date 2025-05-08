@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .error {
+      color: red;
+      margin-left: 10px;
+    }
+    fieldset {
+      border: 1px solid #999;
+      padding: 20px;
+      width: 400px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    .result {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color: goldenrod; border-bottom: 3px solid goldenrod; width: fit-content;">Javascript Calculator</h1>
+  <form id="calcForm">
+    <fieldset>
+      <legend>Calculator</legend>
+
+      <label>Operand 1:
+        <input type="text" id="operand1">
+      </label>
+      <span id="error1" class="error"></span>
+      <br><br>
+
+      <label>Operator:
+        <input type="radio" name="operator" value="+"> +
+        <input type="radio" name="operator" value="-"> -
+        <input type="radio" name="operator" value="*"> *
+        <input type="radio" name="operator" value="/"> /
+      </label>
+      <span id="errorOp" class="error"></span>
+      <br><br>
+
+      <label>Operand 2:
+        <input type="text" id="operand2">
+      </label>
+      <span id="error2" class="error"></span>
+      <br><br>
+
+      <div class="result">
+        Result: <span id="result"></span>
+      </div>
+      <br>
+
+      <button type="button" onclick="calculate()">Calculate</button>
+      <button type="button" onclick="clearForm()">Clear</button>
+    </fieldset>
+  </form>
+
+  <script>
+    function calculate() {
+      // Clear previous errors
+      document.getElementById('error1').textContent = '';
+      document.getElementById('error2').textContent = '';
+      document.getElementById('errorOp').textContent = '';
+      document.getElementById('result').textContent = '';
+
+      const operand1 = document.getElementById('operand1').value.trim();
+      const operand2 = document.getElementById('operand2').value.trim();
+      const operator = document.querySelector('input[name="operator"]:checked');
+
+      let valid = true;
+
+      if (!operand1) {
+        document.getElementById('error1').textContent = 'Operand 1 is Required';
+        valid = false;
+      } else if (isNaN(operand1)) {
+        document.getElementById('error1').textContent = 'Must be a number';
+        valid = false;
+      }
+
+      if (!operator) {
+        document.getElementById('errorOp').textContent = 'Operator is Required';
+        valid = false;
+      }
+
+      if (!operand2) {
+        document.getElementById('error2').textContent = 'Operand 2 is Required';
+        valid = false;
+      } else if (isNaN(operand2)) {
+        document.getElementById('error2').textContent = 'Must be a number';
+        valid = false;
+      }
+
+      if (!valid) return;
+
+      const num1 = parseFloat(operand1);
+      const num2 = parseFloat(operand2);
+      const op = operator.value;
+
+      let result;
+      switch (op) {
+        case '+':
+          result = num1 + num2;
+          break;
+        case '-':
+          result = num1 - num2;
+          break;
+        case '*':
+          result = num1 * num2;
+          break;
+        case '/':
+          if (num2 === 0) {
+            result = 'Error: Division by zero';
+          } else {
+            result = num1 / num2;
+          }
+          break;
+      }
+
+      document.getElementById('result').textContent = result;
+    }
